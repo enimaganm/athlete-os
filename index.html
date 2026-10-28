@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0d1517">
+  <meta name="theme-color" content="#f3f5f4">
   <meta name="description" content="Your guided kettlebell, calisthenics, and mobility program.">
   <title>ATHLETE / OS — Week 01</title>
   <style>
@@ -13,6 +13,208 @@
 @media(max-width:640px){.shell{padding:0 16px 104px}.topbar{height:71px;margin-bottom:20px}.brand{font-size:14px}.brand-mark{width:34px;height:34px}.nav{display:none}.weekpill{font-size:10px;padding:7px 10px}.mobile-nav{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;bottom:env(safe-area-inset-bottom);left:0;right:0;height:67px;z-index:60;background:#101b20f5;border-top:1px solid #30474b;backdrop-filter:blur(18px);padding:5px 8px;box-shadow:0 10px 0 11px #101b20}.mobile-nav button{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:3px;color:var(--muted);background:transparent;border-radius:9px;font-size:10px;font-weight:800}.mobile-nav button .icon{width:21px;height:21px}.mobile-nav button.active{color:var(--accent)}.home-hero{padding:26px 23px}.home-hero h1{margin:11px 0 13px;font-size:46px}.home-hero .summary{font-size:13px}.hero-stats{gap:18px;margin-top:22px}.stat strong{font-size:20px}.stat-divider{min-height:31px}.section-head{margin:27px 0 15px;align-items:start}.daygrid{gap:10px}.daycard{padding:15px;min-height:191px;gap:9px}.daycard h3{font-size:18px}.daycard p{font-size:11px}.daytype{padding:3px 6px;font-size:9px}.daylabel{font-size:10px}.cardbottom{font-size:11px}.session-title-wrap{display:block}.session-title-wrap .accent-btn{margin-top:23px;width:100%}.session-header h1{font-size:44px;margin-top:7px}.block{padding:17px 13px;border-radius:17px}.blockhead{gap:12px}.number{min-width:38px;height:38px;border-radius:11px;font-size:16px}.blockhead h2{font-size:20px}.move{padding:12px 11px;gap:11px;min-height:74px}.move-symbol{width:40px;height:40px}.movetext strong{font-size:14px}.librarygrid{grid-template-columns:1fr}.library-top h1{font-size:46px}.overlay{padding:0;align-items:end}.sheet{border-radius:21px 21px 0 0;border-bottom:0;max-height:94dvh;width:100%}.sheet-body{padding:22px 19px calc(25px + env(safe-area-inset-bottom))}.sheet-head{padding:15px 19px}.guide-card{padding:22px 20px}.guide-card h1{font-size:38px}.guide-top{padding-top:10px}.guide-actions{position:sticky;bottom:74px;z-index:5;padding:7px 0 5px;background:#0b1115d9;backdrop-filter:blur(14px)}.guide-actions .subtle-btn,.guide-actions .accent-btn{min-height:53px}.guide-screen{padding-bottom:2px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{body{color:#111;background:#fff}.topbar,.mobile-nav,.back,.accent-btn,.subtle-btn,.movemore,.video-row{display:none!important}.shell{padding:0}.daycard,.block,.move,.home-hero{break-inside:avoid;border-color:#ccc;background:#fff;color:#111}.muted,.blockhead p,.movetext span{color:#444}.daygrid{grid-template-columns:repeat(2,1fr)}.move-symbol{display:none}.footnote{color:#444}}
+  /* ==================================================================
+   ATHLETE / OS — PERFORMANCE POP / Visual Refresh v1
+   A light, high-contrast design system inspired by athletic editorial
+   typography and expressive streetwear color. CSS only; no JS changes.
+   ================================================================== */
+:root {
+  color-scheme: light;
+  --bg: #f3f5f4;
+  --panel: #ffffff;
+  --panel2: #edf2f7;
+  --panel3: #e4ecf4;
+  --ink: #131a24;
+  --muted: #586678;
+  --accent: #2454d9;
+  --accent2: #0d83bc;
+  --border: #bfccd5;
+  --faint: #d6e0e6;
+  --warn: #9a4d29;
+  --volt: #d9fb4b;
+  --cyan: #79dced;
+  --pink: #ff9ac3;
+  --peach: #ffad8e;
+  --radius: 19px;
+  --shadow: 0 24px 75px rgba(17, 36, 66, .20);
+}
+body {background: linear-gradient(180deg,#f9faf7 0%,#f0f4f6 85%); color:var(--ink)}
+::selection {background:#d9fb4b;color:#101827}
+button:focus-visible,a:focus-visible,input:focus-visible{outline-color:#2454d9}
+.topbar {border-bottom:2px solid #d3dee5;margin-bottom:32px}
+.brand {letter-spacing:-.035em;font-weight:950;font-size:19px}
+.brand-mark {background:var(--volt);color:#17202a;border:1px solid #131a24;border-radius:12px;box-shadow:4px 4px 0 #131a24;font-size:22px}
+.brand > span > span {color:var(--accent)!important}
+.nav {background:#e9eef3;padding:4px;border:1px solid #d4dce2;border-radius:14px}
+.nav button {color:#435167;border-radius:10px;font-weight:800}
+.nav button.active,.nav button:hover {background:#18212d;color:#fff;box-shadow:0 2px 7px #26314624}
+.weekpill {color:#1d3d99;border:1.5px solid #8fa9de;background:#e7eeff;letter-spacing:.11em;font-size:11px;padding:9px 14px}
+.eyebrow {color:#2454d9;letter-spacing:.17em;font-weight:900}
+h1,h2,h3,h4 {font-family: "Arial Black", "Helvetica Neue", Inter, system-ui, sans-serif;font-weight:900}
+h1 {letter-spacing:-.065em;line-height:1.02}
+h2 {letter-spacing:-.045em}
+h3 {letter-spacing:-.035em}
+.heading-sub,.muted,.footnote {color:var(--muted)}
+.section-head {margin:37px 0 18px}
+.section-head h2 {font-size:clamp(24px,3.2vw,33px)}
+
+/* The hero is the one saturated statement piece. */
+.home-hero {background:radial-gradient(circle at 91% 78%,#ff95be 0 8.5%,transparent 9%), radial-gradient(circle at 78% 12%,#e5ff69 0 5.5%,transparent 6%),linear-gradient(122deg,#1742bd 0%,#265fff 66%,#5537d3 100%);border:2px solid #153eab;border-radius:27px;box-shadow:0 14px 35px #2155d02d;padding:42px 45px 36px}
+.home-hero:after {width:425px;height:425px;top:-74px;right:-92px;border:2px solid #ffffff67;box-shadow:0 0 0 57px #ffffff13,0 0 0 118px #ffffff09;transform:rotate(-17deg)}
+.home-hero .hero-content {max-width:690px}
+.home-hero .eyebrow {color:var(--volt);background:#061d5666;border:1px solid #ffffff4d;border-radius:99px;display:inline-flex;padding:7px 12px;letter-spacing:.13em}
+.home-hero h1 {color:#fff;font-size:clamp(45px,5.6vw,76px);line-height:.98;letter-spacing:-.075em;margin:22px 0 19px;text-wrap:balance}
+.home-hero h1 span {color:var(--volt)!important}
+.home-hero .summary {color:#f4f7ff;font-size:15px;line-height:1.65;font-weight:530;max-width:545px}
+.hero-stats {margin-top:31px;gap:29px}
+.stat strong {color:#fff;font-size:26px}
+.stat span {color:#e2ebff;letter-spacing:.105em;font-weight:720}
+.stat-divider {background:#e4ebff7a}
+
+/* Defined bright cards with a colored edge, not dark-on-dark. */
+.daygrid {gap:14px}
+.daycard {background:#fff;border:1.5px solid #b8c8d1;border-radius:18px;box-shadow:0 5px 0 #dde5eb,0 12px 30px #3b4d6610;overflow:hidden;min-height:206px;padding:22px 19px 18px;gap:13px;isolation:isolate}
+.daycard:before {content:"";display:block;position:absolute;inset:0 0 auto 0;height:6px;background:var(--volt)}
+.daycard:has(.daytype.recovery):before {background:var(--cyan)}
+.daycard:has(.daytype.rest):before {background:var(--pink)}
+.daycard:not(:disabled):hover {background:#f6faff;border-color:#2c5dda;transform:translateY(-4px);box-shadow:0 7px 0 #d5e0ee,0 17px 35px #204bcc21}
+.daycard:disabled {opacity:1;background:#f6f7f9}
+.daycard:disabled h3,.daycard:disabled .cardbottom {color:#637080}
+.daylabel {color:#526070;font-weight:900}
+.daytype {background:#e8eeff;color:#1b49b1;border:1px solid #c4d1fb;padding:5px 8px}
+.daytype.recovery {background:#def6f9;color:#135f72;border-color:#9bdded}
+.daytype.rest {background:#fff0f5;color:#874765;border-color:#f3cade}
+.daycard h3 {color:var(--ink);font-size:21px;letter-spacing:-.045em}
+.daycard p {color:#526174;font-size:12px}
+.cardbottom {color:#1f53c9;font-weight:900}
+.cardbottom .arr {background:#e6edff;border-radius:9px;min-width:31px;height:31px;display:grid;place-items:center;font-size:19px}
+.info-strip {background:#e4f2ff;border:1.5px solid #92b9e8;color:#244061;border-radius:16px}
+.info-strip svg {color:#2454d9}
+.info-strip strong {color:#102a52!important}
+
+/* Session overview */
+.back {color:#3555a0;font-weight:800}
+.back:hover {color:#142e83}
+.session-header h1 {color:var(--ink)}
+.session-header .intro {color:#596778}
+.pill {background:#fff;border:1.5px solid #cad4dd;color:#27374e;padding:8px 12px}
+.pill .icon {color:#2454d9}
+.accent-btn {background:#2353da;color:#fff;border:1.5px solid #1c47c2;border-radius:12px;box-shadow:4px 5px 0 #c5d6ff;font-weight:900;transition:background .16s,transform .16s}
+.accent-btn:hover {background:#143ab8;transform:translateY(-1px)}
+.subtle-btn {color:#243349;background:#fff;border:1.5px solid #9fb3c5;border-radius:12px}
+.subtle-btn:hover {background:#f2f7ff;border-color:#2d5bc0}
+.focus-note {background:#ebf5ff;border:1.5px solid #b3cce5;color:#28435d}
+.focus-note svg {color:#2454d9}
+.block {background:#fff;border:1.5px solid #b9cbd5;border-radius:19px;box-shadow:0 7px 18px rgba(26,55,82,.055);padding:25px}
+.number {background:var(--volt);color:#182026;border:1px solid #a9d02d;border-radius:13px;font-weight:950}
+.blockhead .time {color:#2454d9}
+.blockhead h2 {color:#111b27}
+.blockhead p {color:#586879}
+.round-tag {border:1px solid #9eb5e8;background:#eaf0ff;color:#2452b2;font-weight:900;padding:5px 9px;border-radius:8px}
+.move {background:#f6f9fc;border:1.5px solid #ced9e2;color:#151d28;border-radius:12px;min-height:78px}
+.move:hover {background:#ebf3ff;border-color:#769ed9}
+.move-symbol {background:#ddf3ff;border:1.5px solid #89c1e1;color:#135c9d;font-weight:900}
+.move-symbol.strength,.move-symbol.power {color:#2f4b00;border-color:#b3d258;background:#effdbb}
+.move-symbol.core,.move-symbol.carry {color:#6535b1;border-color:#bb9ef0;background:#ece0ff}
+.move-symbol.mobility,.move-symbol.recovery {color:#076276;border-color:#85cbd8;background:#ddfaff}
+.move-symbol.knee-care,.move-symbol.shoulder {color:#994a42;border-color:#f4b2a3;background:#ffe8df}
+.movetext strong {color:#17212e}
+.movetext span {color:#5b6a7b}
+.movemore {color:#2454d9;font-weight:900}
+
+/* Movement library */
+.library-top h1 {color:var(--ink)}
+.searchbox {background:#fff;border:1.5px solid #b1c5d4;color:#657385;box-shadow:0 3px 10px #344a6310}
+.searchbox input {color:#1b2432}
+.searchbox input::placeholder {color:#718094}
+.filterbtn {background:#fff;color:#405067;border:1.5px solid #c2d1de}
+.filterbtn:hover {border-color:#325fca;background:#eef4ff}
+.filterbtn.active {background:#1d52db;color:#fff;border-color:#1d52db}
+.librarycard {background:#fff;border:1.5px solid #c0d1d9;color:#152330;box-shadow:0 3px 8px #1a3b5c0a}
+.librarycard:hover {background:#f0f7ff;border-color:#386bd1}
+.librarycard strong {color:#17202b}
+.librarycard span {color:#5c6a7a}
+.librarycard .movemore {color:#2454d9}
+.empty {color:#4a6074}
+
+/* Exercise coaching panel */
+.overlay {background:#0b1a2db8;backdrop-filter:blur(5px)}
+.sheet {background:#fff;border:2px solid #ccd7df;box-shadow:0 26px 85px #08193350}
+.sheet-head {background:#f4f7fc;border-bottom:1.5px solid #d3dfe9}
+.sheet-head span {color:#2856c4}
+.xbtn {background:#e7ecf3;border:1px solid #c7d5e2;color:#243044}
+.xbtn:hover {background:#dbe8fa}
+.sheet-body .lead {color:#4c5e71}
+.coach-title {color:#2454d9;font-weight:900}
+.cues li {background:#f1f6fc;border:1px solid #dce6f0;color:#253244}
+.cue-count {color:#1949c3;border:1.5px solid #5a88d9;background:#fff;font-weight:900}
+.coach-box {background:#fff4dd;border:1px solid #edcb90;color:#6b451c}
+.coach-box.swap {background:#e5f8fa;border:1px solid #9ccfda;color:#245665}
+.video-row a {color:#fff;background:#2254d7;border:1px solid #174ac5}
+.video-row a:hover {background:#123da8}
+.video-row a.alt {color:#224477;background:#ebf3ff;border:1px solid #abc3e9}
+
+/* Guide Me — bright work surface and persistent legible controls. */
+.guide-step {color:#2454d9}
+.progress {background:#d9e3ed;height:7px}
+.progressfill {background:linear-gradient(90deg,#2454d9,#08addb)}
+.guide-card {background:linear-gradient(145deg,#fff 0%,#f6f9ff 100%);border:1.5px solid #b9cbd8;border-radius:22px;box-shadow:0 6px 20px #26477613}
+.guide-card h1 {color:#111a27}
+.dosebig {background:var(--volt);color:#172225;border:1px solid #a9cc2b}
+.guide-card .subtext {color:#516274}
+.guide-card .lead {color:#34475e}
+.guide-cue {color:#172a40}
+.guide-cue i {color:#2454d9}
+.guide-blocknote {background:#eaf1ff;border:1.5px solid #b5c8e9;color:#354c72}
+.guide-blocknote strong {color:#132d62!important}
+.guide-blocknote span {color:#2454d9!important}
+.guide-links a,.guide-links button {background:#e2edff;border:1px solid #a5bce5;color:#17439a}
+.guide-links a:hover,.guide-links button:hover {background:#d2e5ff}
+.footnote {color:#607184}
+
+@media(max-width:640px) {
+  .topbar {border-bottom-width:1.5px}
+  .brand {font-size:16px}
+  .brand-mark {border-radius:10px;box-shadow:3px 3px 0 #141e29}
+  .weekpill {background:#e8eeff;border-color:#abc0f0}
+  .home-hero {padding:30px 24px 27px;border-radius:22px;background:radial-gradient(circle at 100% 100%,#ff9ebd 0 8%,transparent 8.5%),linear-gradient(128deg,#1840af 0%,#285af1 100%)}
+  .home-hero:after {width:225px;height:225px;right:-142px;top:-72px;border-color:#ffffff45;box-shadow:0 0 0 38px #ffffff0f,0 0 0 77px #ffffff09}
+  .home-hero h1 {font-size:clamp(37px,10.4vw,48px);line-height:1.015;letter-spacing:-.068em;margin:16px 0 16px}
+  .home-hero .summary {font-size:13.5px;color:#f1f6ff}
+  .home-hero .eyebrow {font-size:9px;padding:6px 9px}
+  .hero-stats {display:grid;grid-template-columns:minmax(0,.9fr) 1px minmax(0,1.35fr) 1px minmax(0,1fr);margin-top:23px;gap:8px;align-items:stretch}
+  .stat {min-width:0}
+  .stat strong {font-size:clamp(17px,5.3vw,20px);white-space:nowrap}
+  .stat strong span[style] {font-size:12px!important}
+  .stat span {font-size:8.5px;letter-spacing:.055em;line-height:1.3}
+  .stat-divider {min-height:40px}
+  .section-head {margin:30px 0 17px}
+  .daygrid {gap:11px}
+  .daycard {padding:19px 13px 14px;min-height:197px;box-shadow:0 3px 0 #dce5e9}
+  .daycard h3 {font-size:18px}
+  .daycard p {font-size:11px}
+  .daytype {font-size:9px;padding:4px 6px}
+  .cardbottom .arr {min-width:25px;height:25px;font-size:16px}
+  .block {padding:18px 14px}
+  .mobile-nav {background:#fffffffa;border-top:1.5px solid #aebfce;box-shadow:0 10px 0 11px #fff,0 -6px 26px #132d4212}
+  .mobile-nav button {color:#506377;font-weight:850}
+  .mobile-nav button.active {color:#174bc4;background:#ebf1ff}
+  .mobile-nav button .icon {width:20px;height:20px}
+  .sheet {background:#fff;border-color:#cdd9e1}
+  .sheet-head {background:#f4f7fc}
+  .guide-card {padding:23px 20px}
+  .guide-actions {background:#f3f5f4e8;border:1px solid #d7e2e9;border-radius:13px;padding:9px;box-shadow:0 -6px 18px #465f7514}
+  .guide-actions button {min-width:0;white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){.daycard:not(:disabled):hover,.accent-btn:hover{transform:none}}
+@media print {
+  body{background:#fff;color:#111}
+  .home-hero {background:#fff;border-color:#ccc;box-shadow:none}
+  .home-hero h1,.home-hero .summary,.home-hero .stat strong,.home-hero .stat span,.home-hero .eyebrow{color:#111!important}
+  .daycard,.block,.move {border:1px solid #bbb;box-shadow:none;background:#fff}
+  .daycard:before{display:none}
+}
+
   </style>
   <script src="workouts.js"></script>
 </head>
